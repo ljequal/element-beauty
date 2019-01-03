@@ -7,10 +7,14 @@
   position: relative;
   margin: 0 auto 50px;
   background: $--color-white;
-  border-radius: $--border-radius-small;
+  //border-radius: $--border-radius-small;
   box-shadow: $--dialog-box-shadow;
   box-sizing: border-box;
   width: 50%;
+  // start
+  border-radius: 9px;
+  overflow: hidden;
+  // end
 
   @include when(fullscreen) {
     width: 100%;
@@ -31,14 +35,20 @@
   }
 
   @include e(header) {
-    padding: $--dialog-padding-primary;
-    padding-bottom: 10px;
+    // start
+    height: 68px;
+    padding: 16px 20px;
+    background: #181f2f;
+    box-sizing: border-box;
+    // end
+    //padding: $--dialog-padding-primary;
+    //padding-bottom: 10px;
   }
 
   @include e(headerbtn) {
-    position: absolute;
-    top: $--dialog-padding-primary;
-    right: $--dialog-padding-primary;
+    //position: absolute;
+    //top: $--dialog-padding-primary;
+    //right: $--dialog-padding-primary;
     padding: 0;
     background: transparent;
     border: none;
@@ -46,8 +56,26 @@
     cursor: pointer;
     font-size: $--message-close-size;
 
+    // start
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    line-height: 1;
+    border-radius: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#e34f89), to(#e95843));
+    background: linear-gradient(90deg, #e34f89, #e95843);
+    text-align: center;
+    // end
+
     .el-dialog__close {
-      color: $--color-info;
+      //color: $--color-info;
+      // start
+      font-weight: bold;
+      font-size: 18px;
+      color: #181F2F;
+      // end
     }
 
     &:focus, &:hover {
@@ -58,13 +86,21 @@
   }
 
   @include e(title) {
-    line-height: $--dialog-line-height;
-    font-size: $--dialog-title-font-size;
-    color: $--color-text-primary;
+    //line-height: $--dialog-line-height;
+    //font-size: $--dialog-title-font-size;
+    //color: $--color-text-primary;
+    // start
+    font-size: 18px;
+    color: #fff;
+    line-height: 36px;
+    // end
   }
 
   @include e(body) {
-    padding: 30px 20px;
+    //padding: 30px 20px;
+    // start
+    padding: 30px;
+    // end
     color: $--color-text-regular;
     font-size: $--dialog-font-size;
   }

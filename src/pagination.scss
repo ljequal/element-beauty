@@ -22,9 +22,11 @@
   }
 
   .el-input__inner {
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     -moz-appearance: textfield;
-    line-height: normal;
+    //line-height: normal;
   }
 
   // pagesize 的下拉 icon
@@ -84,7 +86,7 @@
   }
 
   .btn-next {
-    padding-left: 12px;    
+    padding-left: 12px;
   }
 
   .el-pager li.disabled {
@@ -168,7 +170,7 @@
     line-height: 18px;
     padding: 0 2px;
     height: $--pagination-button-height;
-      
+
     text-align: center;
     margin: 0 2px;
     box-sizing: border-box;
@@ -196,7 +198,7 @@
       margin: 0 5px;
       background-color: $--color-info-lighter;
       color: $--color-text-regular;
-      min-width: 30px;
+      min-width: 40px;
       border-radius: 2px;
 
       &.disabled {
