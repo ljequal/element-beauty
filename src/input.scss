@@ -69,6 +69,11 @@
     }
   }
 
+  & .el-input__inner {
+    height: 40px;
+    line-height: 40px;
+  }
+
   @include e(inner) {
     -webkit-appearance: none;
     background-color: $--input-fill;
@@ -224,7 +229,7 @@
   display: inline-table;
   width: 100%;
   border-collapse: separate;
-  border-spacing:0;
+  border-spacing: 0;
 
   > .el-input__inner {
     vertical-align: middle;

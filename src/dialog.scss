@@ -79,8 +79,10 @@
     }
 
     &:focus, &:hover {
+      background: linear-gradient(90deg, rgba(255, 125, 176, 1), rgba(255, 135, 118, 1));
+      box-shadow: 0 4px 10px 0 rgba(197, 74, 91, 0.5);
       .el-dialog__close {
-        color: $--color-primary;
+        //color: $--color-primary;
       }
     }
   }

@@ -25,13 +25,13 @@
     margin-left: 10px;
   }
 
-  @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+  @include button-size($--button-padding-vertical, $--button-padding-horizontal, 16px, $--button-border-radius);
 
   &:hover,
   &:focus {
     color: $--color-primary;
-    border-color: $--color-primary-light-7;
-    background-color: $--color-primary-light-9;
+    //border-color: $--color-primary-light-7;
+    //background-color: $--color-primary-light-9;
   }
 
   &:active {
@@ -110,7 +110,7 @@
       right: -1px;
       bottom: -1px;
       border-radius: inherit;
-      background-color: rgba(255,255,255,.35);
+      background-color: rgba(255, 255, 255, .35);
     }
   }
   @include when(round) {
@@ -123,6 +123,21 @@
   }
   @include m(primary) {
     @include button-variant($--button-primary-color, $--button-primary-fill, $--button-primary-border);
+    background: linear-gradient(90deg, rgba(227, 79, 137, 1), rgba(233, 88, 67, 1));
+    box-shadow: 0px 4px 10px 0px rgba(197, 74, 91, 0.5);
+    border-radius: 5px;
+    &:hover {
+      color: #fff;
+      border-color: rgba(255, 125, 176, 1);
+      background: linear-gradient(90deg, rgba(255, 125, 176, 1), rgba(255, 135, 118, 1));
+      box-shadow: 0 4px 10px 0 rgba(197, 74, 91, 0.5);
+    }
+    &:focus {
+      color: #fff;
+      border-color: rgba(202, 50, 110, 1);
+      background: linear-gradient(90deg, rgba(202, 50, 110, 1), rgba(200, 57, 37, 1));
+      box-shadow: 0px 4px 10px 0px rgba(197, 74, 91, 0.5);
+    }
   }
   @include m(success) {
     @include button-variant($--button-success-color, $--button-success-fill, $--button-success-border);
