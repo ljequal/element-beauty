@@ -102,6 +102,8 @@
     //padding: 30px 20px;
     // start
     padding: 30px;
+    max-height: 700px;
+    overflow: auto;
     // end
     color: $--color-text-regular;
     font-size: $--dialog-font-size;
